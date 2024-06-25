@@ -5,12 +5,12 @@ from aiogram.types import ChatJoinRequest
 from aiogram import Bot, Dispatcher, F
 import logging
 
-TOKEN = "7431577963:AAF9Abnq-p62HbBRohMSu0rLuXsFyLYoiF8"
-CHANNEL_ID = -1002164255888
-ADMIN_ID = 1461130399
+TOKEN = "your token"
+CHANNEL_ID = put here your channel id
+ADMIN_ID = put here your id
 
 async def approve_request(chat_join: ChatJoinRequest, bot: Bot): 
-    msg = "Добро пожаловать!"
+    msg = "Добро пожаловать!" # text something here
     await bot.send_message(chat_id=chat_join.from_user.id, text=msg)
     await chat_join.approve()
 
